@@ -1,0 +1,27 @@
+{
+  "name": "movie_api",
+  "version": "1.0.0",
+  "description": "Repository for my Node.js app",
+  "main": "server.js",
+  "dependencies": {
+    "eslint": "^7.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drjlevi6/movie_api.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Jonathan Levi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drjlevi6/movie_api/issues"
+  },
+  "homepage": "https://github.com/drjlevi6/movie_api#readme"
+}
