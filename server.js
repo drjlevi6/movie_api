@@ -3,9 +3,14 @@ const http = require('http');
 const fs = require('fs');
 
 http.createServer((request, response) => {
-  console.log('In createServer()\n');   // NOT EXECUTED!
-   console.log(request.url);
-  if(request.url.includes("documentation")) {
+  //console.log('\n\nNew Input:\n');
+  //console.log(request.url); //request.url
+  fs.appendFile('./log.txt', 
+    'URL: ' + request.url + '\n' + 
+    'Timestamp: ' + Date() + '\n\n', (err) => {
+      if (err) { console.log(err); }
+    });
+    if(request.url.includes("documentation")) {
     response.writeHead(200, {'Content-Type': 'text/html'});
     fs.createReadStream("documentation.html").pipe(response);
   } else {
