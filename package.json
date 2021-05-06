@@ -4,9 +4,9 @@
   "description": "Repository for my Node.js app",
   "main": "server.js",
   "dependencies": {
-    "eslint": "^7.25.0"
+    "eslint": "^7.25.0",
+    "lodash": "^4.17.21"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
