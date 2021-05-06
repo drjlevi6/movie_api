@@ -4,6 +4,7 @@
   "description": "Repository for my Node.js app",
   "main": "server.js",
   "dependencies": {
+    "Express": "^3.0.1",
     "lodash": "^4.17.21"
   },
   "scripts": {
