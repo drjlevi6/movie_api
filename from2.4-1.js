@@ -28,7 +28,10 @@ app.get('/documentation', (req, res) => {
 app.get('/books', (req, res) => {
   res.json(topBooks);
 });
-
+app.get("/text", (req, res) => {
+  console.log(req.query);
+  }
+)
 
 // listen for requests
 app.listen(8080, () => {
