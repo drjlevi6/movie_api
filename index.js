@@ -18,6 +18,11 @@ let topMovies = [
 ];
 
 app.use(morgan('common'));
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 
 // GET requests
 app.get('/movies', (req, res) => {
