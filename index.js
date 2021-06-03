@@ -134,9 +134,21 @@ app.use((err, req, res, next) => {
 
 
 // GET requests
+
+// Following request returns the app's list of current top movies
 app.get('/movies', (req, res) => {
 	res.json(topMovies);
 });
+
+//	Following request returns data about a single movie, selected by title by the user; data comprises
+// (description, genre, director, image URL, whether movie’s featured or not)
+app.get('/movies/:name', (req, res) => {
+	let movieToFind = req.params.name
+	let movieData = topMovies.find(item => {
+		return item.name === movieToFind;
+	})
+	res.json(movieData);
+})
 
 app.get('/', (req, res) => {
 	res.send('Welcome to Jonathan Levi\'s book club!');
